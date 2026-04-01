@@ -1,14 +1,27 @@
-[gd_scene format=3 uid="uid://pvmwyvwydqc5"]
+[gd_scene format=4 uid="uid://pvmwyvwydqc5"]
 
 [ext_resource type="Texture2D" uid="uid://ceji0ckrnowfi" path="res://Kim (PLACEHOLDER).png" id="1_f3sb7"]
+[ext_resource type="Script" uid="uid://cysejh4oit52x" path="res://john_meter.gd" id="1_tlwt5"]
+[ext_resource type="TileSet" uid="uid://kn3t0y4flel3" path="res://board.tres" id="3_tlwt5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_036b0"]
+size = Vector2(108, 150)
 
 [node name="The Sea" type="Node2D" unique_id=921215199]
 
 [node name="John Meter" type="CharacterBody2D" parent="." unique_id=428284330]
+position = Vector2(576, 324)
+script = ExtResource("1_tlwt5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="John Meter" unique_id=1084016565]
+shape = SubResource("RectangleShape2D_036b0")
 
 [node name="Sprite2D" type="Sprite2D" parent="John Meter" unique_id=932295237]
+scale = Vector2(0.48642534, 0.48642534)
 texture = ExtResource("1_f3sb7")
 
 [node name="Camera2D" type="Camera2D" parent="John Meter" unique_id=1204447391]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=936301103]
+tile_map_data = PackedByteArray("AAAIAP//AwAAAAAAAAAHAP//AwAAAAAAAAAGAP//AwAAAAAAAAAFAP//AwAAAAAAAAAEAP//AwAAAAAAAAADAP//AwAAAAAAAAACAP//AwAAAAAAAAABAP//AwAAAAAAAAAAAP//AwAAAAAAAAD/////AwAAAAAAAAD//wAAAwAAAAAAAAD//wEAAwAAAAAAAAD//wIAAwAAAAAAAAD//wMAAwAAAAAAAAD//wQAAwAAAAAAAAD//wUAAwAAAAAAAAAAAAUAAwAAAAAAAAABAAUAAwAAAAAAAAACAAUAAwAAAAAAAAADAAUAAwAAAAAAAAAEAAUAAwAAAAAAAAAFAAUAAwAAAAAAAAAGAAUAAwAAAAAAAAAHAAUAAwAAAAAAAAAIAAUAAwAAAAAAAAAJAAUAAwAAAAAAAAAJAAQAAwAAAAAAAAAJAAMAAwAAAAAAAAAJAAIAAwAAAAAAAAAJAAEAAwAAAAAAAAAJAAAAAwAAAAAAAAAJAP//AwAAAAAAAAA=")
+tile_set = ExtResource("3_tlwt5")
