@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # speed in pixels/sec
-var speed = 500 
+var speed = 700 
 
 func _physics_process(_delta):
 # setup direction of movement
