@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ceji0ckrnowfi" path="res://Kim (PLACEHOLDER).png" id="2_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://crp0fo3wwft3y" path="res://5md Mess hall 2.png" id="2_dwbse"]
 [ext_resource type="Texture2D" uid="uid://ib2l8o25au1q" path="res://sub guy idle.png" id="3_aqk2v"]
+[ext_resource type="Script" uid="uid://bgl88rq1fv3m2" path="res://area_2d.gd" id="6_dwbse"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dwbse"]
 texture = ExtResource("2_036b0")
@@ -255,6 +256,26 @@ animations = [{
 "loop": true,
 "name": &"Idle",
 "speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"WalkDown",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"WalkLeft",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"WalkRight",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"WalkUp",
+"speed": 5.0
 }]
 
 [node name="The Sea" type="Node2D" unique_id=1244423492]
@@ -299,6 +320,8 @@ autoplay = "Idle"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1203101516]
 position = Vector2(-4617, 493)
+script = ExtResource("6_dwbse")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=515839311]
-polygon = PackedVector2Array(-104, 134, 73, 135, 308, 134, 306, -64, 306, -255, 72, -253, 70, -96, -108, -92)
+position = Vector2(6, -17)
+polygon = PackedVector2Array(-108, 135, 60, 135, 310, 134, 310, -91, 310, -254, 180.52112, -253.99997, 61, -254, 60, -91, -108, -91)
